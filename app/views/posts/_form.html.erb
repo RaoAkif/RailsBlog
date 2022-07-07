@@ -22,6 +22,16 @@
   </div>
 
   <div>
+    <%= form.label :comments_counter, style: "display: block" %>
+    <%= form.number_field :comments_counter %>
+  </div>
+
+  <div>
+    <%= form.label :likes_counter, style: "display: block" %>
+    <%= form.number_field :likes_counter %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
