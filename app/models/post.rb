@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  belongs_to :user, foreign_key: :author_id
+  belongs_to :author, class_name: 'User'
   has_many :comments
   has_many :likes
 
@@ -12,6 +12,6 @@ class Post < ApplicationRecord
   private
 
   def increment_user_posts_count
-    user.increment!(:posts_counter)
+    author.increment!(:posts_counter)
   end
 end
