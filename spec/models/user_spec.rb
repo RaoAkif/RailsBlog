@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end
   end
-  
+
   it 'should have a last_3_posts method' do
     expect(@user).to respond_to(:last_3_posts)
   end
