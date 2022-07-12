@@ -1,12 +1,12 @@
 <h1>Users</h1>
 
-<h2>This page contains the list of all users</h2>
-
-<div>
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
+<% @users.each do |user| %>
+  <div>
+    <img src="https://picsum.photos/200" alt="User - <%= user.name%> Picture">
+    <div>
+      <h2><%= user.name%></h2>
+      <p>Number of posts: <%= user.posts_counter %></p>
+      <%= link_to "See more", user_path(user.id), {:class => "button_class"} %>
+    </div>
+  </div>
+<% end %>
