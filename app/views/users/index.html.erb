@@ -1,8 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Users</h1>
 
-<div id="users">
+<h2>This page contains the list of all users</h2>
+
+<div>
   <% @users.each do |user| %>
     <%= render user %>
     <p>
@@ -10,5 +10,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New user", new_user_path %>

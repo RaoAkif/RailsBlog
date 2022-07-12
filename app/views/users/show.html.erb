@@ -1,10 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </p>
 
-<%= render @user %>
+  <p>
+    <strong>Photo:</strong>
+    <%= user.photo %>
+  </p>
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
+  <p>
+    <strong>Bio:</strong>
+    <%= user.bio %>
+  </p>
 
-  <%= button_to "Destroy this user", @user, method: :delete %>
+  <p>
+    <strong>Posts counter:</strong>
+    <%= user.posts_counter %>
+  </p>
+
 </div>
