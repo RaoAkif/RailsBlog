@@ -74,5 +74,6 @@ group :test do
 end
 
 # Others
-gem 'ffi'gem 'htmlbeautifier'
+gem 'ffi'
+gem 'htmlbeautifier'
 
