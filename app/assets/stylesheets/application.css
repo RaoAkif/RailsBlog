@@ -17,7 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 10px;
   width: 75%;
   margin: auto;
 }
@@ -56,26 +55,25 @@
   }
 
   .user_data {
-    align-items: centre;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     width: 100%;
   }
-  
+
   .user_data > * {
     padding: 0;
     margin: 0;
   }
-  
+
   .user_data > h2 {
     padding: 5px;
   }
-  
+
   .see-user-details {
     width: 100% !important;
   }
-  
+
   .see-user-details > p {
     margin: 5px;
   }
