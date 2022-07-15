@@ -3,15 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
-# Rubocop Linters
-gem 'eslint-rails'
-gem 'rubocop'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3'
-
-gem 'htmlbeautifier'
-
-gem 'ffi'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -58,6 +51,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -78,8 +73,6 @@ group :test do
   gem 'webdrivers'
 end
 
-# RSpec
-group :development, :test do
-  gem 'rails-controller-testing'
-  gem 'rspec-rails'
-end
+# Others
+gem 'ffi'
+gem 'htmlbeautifier'
