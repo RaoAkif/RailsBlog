@@ -1,6 +1,20 @@
-# Rails Blog
+- In `config` folder, open `database.yml` file and Add on line 23, 24, UserName of Database and Password (In my case, in pgAdmin).
+```
+  username: postgres
+  password: 12345
+```
 
-> This Rails Blog app is an example of a fully functional blog website that shows the list of posts that provides the audience an ability to interact with them by adding comments and likes to the posts.
+- Update Application name with `app_name` on line 28, 62, 86, 87 & also in UpperCase `APP_NAME` on line 88.
+
+##### Initialize a DB:
+```
+rails db:create
+```
+
+
+# PROJECT_NAME
+
+> Description the project.
 
 ## Built With
 - Ruby on Rails
@@ -25,7 +39,7 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 In order to run, you need to install RUBY and Rails in your computer. For windows you can go to [Ruby installer](https://rubyinstaller.org/) and for MAC and LINUX you can go to [Ruby official site](https://www.ruby-lang.org/en/downloads/) for intructions on how to intall it.
 
-Then you can clone the project by typing ```git clone https://github.com/RaoAkif/RailsBlog```
+Then you can clone the project by typing ```git clone https://github.com/RaoAkif/PROJECT_NAME```
 
 ### Run app
 - Type ```bundle install``` in the root file of the project. 
