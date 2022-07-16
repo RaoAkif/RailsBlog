@@ -1,10 +1,4 @@
-<div class="user_container">
-  <img src="<%= @user.photo %>" alt="Use picture" class="user_photo">
-  <div class="user_data">
-    <h2><%= @user.name%></h2>
-    <p>Number of posts: <%= @user.posts_counter %></p>
-  </div>
-</div>
+<%= render @user %>
 
 <div class="user_bio_container">
   <h2>Bio</h2>
@@ -14,16 +8,14 @@
 <div class="user_posts">
   <h2>Posts</h2>
   <% @user.last_3_posts.each do |post| %>
-    <div class="post_container">
-      <h3><%= post.title%></h3>
-      <p><%= post.text%></p>
-      <h4>Comments <%= post.comments_counter%>, Likes <%= post.likes_counter%></h4>
-    </div>
+    <%= link_to user_post_path(@user.id, post.id), {:class => "link_class"} do %>
+      <%= render post %>
+    <% end %>
   <%end%>
 
-  <div class="button-wrapper">
-    <button class="button">
-      <%= link_to "See all posts", user_posts_path(@user), {:class => "button_class"} %>
+  <div class="button_container">
+    <button class="button_class">
+      <%= link_to "See all posts", user_posts_path(@user), {:class => "link_class2"} %>
     </button>
   </div>
 </div>

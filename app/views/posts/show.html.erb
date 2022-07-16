@@ -1,13 +1,9 @@
-<div class="post_container">
-  <div class="post_header">
-    <h1><%= @post.title %> by <%= @post.author.name %></h1>
-    <h3>Comments <%= @post.comments_counter%>, Likes <%= @post.likes_counter%></h3>
-  </div>
-  <p><%= @post.text %></p>
-</div>
+<%= render @post %>
 
 <div class="comments">
   <% @comments.each do |comment| %>
-    <p><%= comment.author.name %>: <%= comment.text%></p>
+    <%= render comment %>
   <% end %>
 </div>
+
+<%= render "comments/form" %>
