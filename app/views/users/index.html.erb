@@ -1,12 +1,5 @@
 <% @users.each do |user| %>
-  <div class="user_container">
-    <img src="<%= user.photo %>" alt="Use picture" class="user_photo">
-    <div class="user_data">
-      <h2><%= user.name%></h2>
-      <div class="see-user-details">
-        <p>Number of posts: <%= user.posts_counter %></p>
-        <%= link_to "See User Details", user_path(user.id), {:class => "button_class"} %>
-      </div>
-    </div>
-  </div>
+  <%= link_to user_path(user.id), {:class => "link_class"} do %>
+    <%= render user %>
+  <% end %>
 <% end %>

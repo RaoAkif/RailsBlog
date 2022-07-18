@@ -1,0 +1,10 @@
+<div class="post_container">
+  <h3><%= post.title%></h3>
+  <p><%= post.text%></p>
+  <div class="social_status">
+    <h4>Comments <%= post.comments_counter%>, Likes <%= post.likes_counter%></h4>
+    <%= form_with url: "/users/#{@user.id}/posts/#{post.id}/likes" do |liked| %>
+      <%= liked.submit "Like Post", class: "like_button"%>
+    <% end %>
+  </div>
+</div>

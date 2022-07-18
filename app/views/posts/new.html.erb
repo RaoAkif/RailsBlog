@@ -1,0 +1,20 @@
+<%= form_with model: @post, class: "form" do |form| %>
+  <h2 class="form_title">Create a Post</h2>
+  <section class="form-section">
+    <p class="input-text"><%= form.label :title %>:</p>
+    <%= form.text_field :title,
+    class: "text_input",
+    placeholder: "Write your post title..." %>
+  </section>
+
+  <section class="form-section">
+    <p class="input-text"><%= form.label :text %>:</p>
+    <%= form.text_area :text,
+    class: "text_input",
+    placeholder: "Write your post text..." %>
+  </section>
+
+  <section class="form-section">
+    <%= form.submit class: "submit_button" %>
+  </section>
+<% end %>
