@@ -1,7 +1,7 @@
 <%= render @post %>
 
 <div class="comments">
-  <% @comments.each do |comment| %>
+  <% @comments.includes([:author]).each do |comment| %>
     <%= render comment %>
   <% end %>
 </div>

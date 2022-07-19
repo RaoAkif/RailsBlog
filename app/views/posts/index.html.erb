@@ -6,7 +6,7 @@
   <% end %>
 
   <div class="comments">
-    <% post.last_5_comments.each do |comment| %>
+    <% post.last_5_comments.includes([:author]).each do |comment| %>
       <%= render comment %>
     <% end %>
   </div>
